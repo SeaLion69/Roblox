@@ -1,4 +1,3 @@
-local FPS_BOOSTER = https://raw.githubusercontent.com/SeaLion69/Roblox/main/ROBLOX%20FPS%20BOOSTER%20NEW%20JULY%202021%20-%20UP%20TO%20300%2B%20FPS%20ON%20ROBLOX.txt
 
 
 local DNA_w_AR = 1
