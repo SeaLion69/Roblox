@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("DNA (Sword Simulator)", "Midnight")
+local Window = Library.CreateLib("DNA HUB (Sword Simulator)", "Midnight")
 
 
 
