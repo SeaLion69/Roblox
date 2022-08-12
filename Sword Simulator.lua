@@ -13,12 +13,82 @@ local DNA_w_Aegg = 1
 
 local TTTT1 = Window:NewTab("Farm")
 
+local Section1 = TTTT1:NewSection("- Auto Farm Dungeon -")
+
+local AF_T_DG001 = [[ Auto Farm : Dungeon ]]
+
+local AF_TSub_DG001 = [[ Auto Farm Dungeon ]]
 
 
-local Section1 = TTTT1:NewSection("- Auto Farm -")
 
 
-Section1:NewToggle("Auto Farm : Grassland", "Auto Farm Grassland", function(state)
+Section1:NewToggle(AF_T_DG001, AF_TSub_DG001, function(state)
+    getgenv().Farm1 = state
+
+    while wait() do
+        if getgenv().Farm1 == true then
+            pcall(function()
+                for i,v in pairs(game.Workspace.Mobs.Other:GetChildren()) do
+                        if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+                            repeat
+                                wait()
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
+                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+
+
+
+
+
+
+
+
+local Section1 = TTTT1:NewSection("- Auto Farm Map -")
+
+
+
+local AF_T_001 = [[ Auto Farm : Grassland ]]
+local AF_T_002 = [[ Auto Farm : Savannah ]]
+local AF_T_003 = [[ Auto Farm : Desert ]]
+local AF_T_004 = [[ Auto Farm : Cavern ]]
+local AF_T_005 = [[ Auto Farm : Castle ]]
+local AF_T_006 = [[ Auto Farm : Volcano ]]
+local AF_T_007 = [[ Auto Farm : Wasteland ]]
+local AF_T_008 = [[ Auto Farm : Coral ]]
+local AF_T_009 = [[ Auto Farm : Village ]]
+local AF_T_010 = [[ Auto Farm : Forest ]]
+local AF_T_011 = [[ Auto Farm : City ]]
+local AF_T_012 = [[ Auto Farm : Pixel Forest ]]
+
+
+
+
+local AF_TSub_001 = [[ Auto Farm Grassland ]]
+local AF_TSub_002 = [[ Auto Farm Savannah ]]
+local AF_TSub_003 = [[ Auto Farm Desert ]]
+local AF_TSub_004 = [[ Auto Farm Cavern ]]
+local AF_TSub_005 = [[ Auto Farm Castle ]]
+local AF_TSub_006 = [[ Auto Farm Volcano ]]
+local AF_TSub_007 = [[ Auto Farm Wasteland ]]
+local AF_TSub_008 = [[ Auto Farm Coral ]]
+local AF_TSub_009 = [[ Auto Farm Village ]]
+local AF_TSub_010 = [[ Auto Farm Forest ]]
+local AF_TSub_011 = [[ Auto Farm City ]]
+local AF_TSub_012 = [[ Auto Farm Pixel Forest ]]
+
+
+
+
+
+
+
+Section1:NewToggle(AF_T_001, AF_TSub_001, function(state)
     getgenv().Farm1 = state
 
     while wait() do
@@ -39,26 +109,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Savannah", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_002, AF_TSub_002, function(state)
+    getgenv().Farm2 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm2 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["2"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm2 == false
                     end
                 end
             end)
@@ -68,26 +130,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Desert", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_003, AF_TSub_003, function(state)
+    getgenv().Farm3 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm3 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["3"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm3 == false
                     end
                 end
             end)
@@ -97,26 +151,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Cavern", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_004, AF_TSub_004, function(state)
+    getgenv().Farm4 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm4 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["4"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm4 == false
                     end
                 end
             end)
@@ -126,26 +172,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Castle", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_005, AF_TSub_005, function(state)
+    getgenv().Farm5 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm5 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["5"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm5 == false
                     end
                 end
             end)
@@ -155,26 +193,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Volcano", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_006, AF_TSub_006, function(state)
+    getgenv().Farm6 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm6 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["6"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm6 == false
                     end
                 end
             end)
@@ -184,26 +214,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Wasteland", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_007, AF_TSub_007, function(state)
+    getgenv().Farm7 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm7 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["7"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm7 == false
                     end
                 end
             end)
@@ -213,26 +235,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Coral", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_008, AF_TSub_008, function(state)
+    getgenv().Farm8 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm8 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["8"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm8 == false
                     end
                 end
             end)
@@ -242,26 +256,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Auto Farm : Village", "", function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_009, AF_TSub_009, function(state)
+    getgenv().Farm9 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm9 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["9"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm9 == false
                     end
                 end
             end)
@@ -271,26 +277,18 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-Section1:NewToggle("Farm Map 10", nil, function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_010, AF_TSub_010, function(state)
+    getgenv().Farm10 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm10 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["10"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm10 == false
                     end
                 end
             end)
@@ -300,20 +298,18 @@ end)
 
 
 
-
-
-Section1:NewToggle("Farm Map 11", nil, function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_011, AF_TSub_011, function(state)
+    getgenv().Farm11 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm11 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["11"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm11 == false
                     end
                 end
             end)
@@ -323,22 +319,18 @@ end)
 
 
 
-
-
-
-
-Section1:NewToggle("Farm Map 12", nil, function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_012, AF_TSub_012, function(state)
+    getgenv().Farm12 = state
 
     while wait() do
-        if getgenv().Farm1 == true then
+        if getgenv().Farm12 == true then
             pcall(function()
                 for i,v in pairs(game.Workspace.Mobs["12"]:GetChildren()) do
                         if v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
                             repeat
                                 wait()
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                            until v.Humanoid.Health <= 0 or getgenv().Farm1 == false
+                            until v.Humanoid.Health <= 0 or getgenv().Farm12 == false
                     end
                 end
             end)
@@ -515,8 +507,6 @@ local TTTT3 = Window:NewTab("Teleport")
 
 
 
-
-
 local TS_1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local TS_2 = TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0)
 local TweenService = game:GetService("TweenService")
@@ -524,15 +514,27 @@ local TweenService = game:GetService("TweenService")
 
 
 
-local Section3 = TTTT3:NewSection("- Teleport DG -")
+
+
+local Section3 = TTTT3:NewSection("- Teleport Dungeon -")
 
 
 
-local TP_ILDG00L = CFrame.new
+
+local TP_ILDG00L = CFrame.new(-3401, 20+136.80029296875, 468)
 
 
 
-Section3:NewButton("Teleport To : Grassland", "Grassland", function()
+TP_T_DG001 = [[ Teleport To : Dungeon ]]
+
+
+
+TP_TSub_DG001 = [[ Teleport Dungeon ]]
+
+
+
+
+Section3:NewButton(TP_T_DG001, TP_TSub_DG001, function()
     pcall(function()
     local TP_1 = TweenService:Create(TS_1, TS_2, 
     {CFrame = TP_ILDG00L}):Play()
@@ -567,35 +569,35 @@ local TP_IL12 = CFrame.new(2362, 20+42.491371154785156, 7624)
 
 
 
-TP_T_001 = [[ Teleport To : Grassland ]]
-TP_T_002 = [[ Teleport To : Savannah ]]
-TP_T_003 = [[ Teleport To : Desert ]]
-TP_T_004 = [[ Teleport To : Cavern ]]
-TP_T_005 = [[ Teleport To : Castle ]]
-TP_T_006 = [[ Teleport To : Volcano ]]
-TP_T_007 = [[ Teleport To : Wasteland ]]
-TP_T_008 = [[ Teleport To : Coral ]]
-TP_T_009 = [[ Teleport To : Village ]]
-TP_T_010 = [[ Teleport To : Forest ]]
-TP_T_011 = [[ Teleport To : City ]]
-TP_T_012 = [[ Teleport To : Pixel Forest ]]
+local TP_T_001 = [[ Teleport To : Grassland ]]
+local TP_T_002 = [[ Teleport To : Savannah ]]
+local TP_T_003 = [[ Teleport To : Desert ]]
+local TP_T_004 = [[ Teleport To : Cavern ]]
+local TP_T_005 = [[ Teleport To : Castle ]]
+local TP_T_006 = [[ Teleport To : Volcano ]]
+local TP_T_007 = [[ Teleport To : Wasteland ]]
+local TP_T_008 = [[ Teleport To : Coral ]]
+local TP_T_009 = [[ Teleport To : Village ]]
+local TP_T_010 = [[ Teleport To : Forest ]]
+local TP_T_011 = [[ Teleport To : City ]]
+local TP_T_012 = [[ Teleport To : Pixel Forest ]]
 
 
 
 
 
-TP_TSub_001 = [[ Teleport Grassland ]]
-TP_TSub_002 = [[ Teleport Savannah ]]
-TP_TSub_003 = [[ Teleport Desert ]]
-TP_TSub_004 = [[ Teleport Cavern ]]
-TP_TSub_005 = [[ Teleport Castle ]]
-TP_TSub_006 = [[ Teleport Volcano ]]
-TP_TSub_007 = [[ Teleport Wasteland ]]
-TP_TSub_008 = [[ Teleport Coral ]]
-TP_TSub_009 = [[ Teleport Village ]]
-TP_TSub_010 = [[ Teleport Forest ]]
-TP_TSub_011 = [[ Teleport City ]]
-TP_TSub_012 = [[ Teleport Pixel Forest ]]
+local TP_TSub_001 = [[ Teleport Grassland ]]
+local TP_TSub_002 = [[ Teleport Savannah ]]
+local TP_TSub_003 = [[ Teleport Desert ]]
+local TP_TSub_004 = [[ Teleport Cavern ]]
+local TP_TSub_005 = [[ Teleport Castle ]]
+local TP_TSub_006 = [[ Teleport Volcano ]]
+local TP_TSub_007 = [[ Teleport Wasteland ]]
+local TP_TSub_008 = [[ Teleport Coral ]]
+local TP_TSub_009 = [[ Teleport Village ]]
+local TP_TSub_010 = [[ Teleport Forest ]]
+local TP_TSub_011 = [[ Teleport City ]]
+local TP_TSub_012 = [[ Teleport Pixel Forest ]]
 
 
 
