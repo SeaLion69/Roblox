@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("DNA (Sword Simulator)", "Midnight")
+local Window = Library.CreateLib("DNA HUB (Sword Simulator)", "Midnight")
 
 
 
@@ -11,7 +11,7 @@ local DNA_w_Aegg = 1
 
 
 
-local TTTT1 = Window:NewTab("Farm")
+local TTTT1 = Window:NewTab("FARM")
 
 
 
@@ -27,8 +27,8 @@ local AF_TSub_DG001 = [[ Auto Farm Dungeon ]]
 
 
 
-Section1:NewToggle(AF_T_DG001, AF_TSub_DG001, function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_DG001, AF_TSub_DG001, function(F_DG001)
+    getgenv().Farm1 = F_DG001
 
     while wait() do
         if getgenv().Farm1 == true then
@@ -93,8 +93,8 @@ local AF_TSub_012 = [[ Auto Farm Pixel Forest ]]
 
 
 
-Section1:NewToggle(AF_T_001, AF_TSub_001, function(state)
-    getgenv().Farm1 = state
+Section1:NewToggle(AF_T_001, AF_TSub_001, function(FM_001)
+    getgenv().Farm1 = FM_001
 
     while wait() do
         if getgenv().Farm1 == true then
@@ -114,8 +114,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_002, AF_TSub_002, function(state)
-    getgenv().Farm2 = state
+Section1:NewToggle(AF_T_002, AF_TSub_002, function(FM_002)
+    getgenv().Farm2 = FM_002
 
     while wait() do
         if getgenv().Farm2 == true then
@@ -135,8 +135,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_003, AF_TSub_003, function(state)
-    getgenv().Farm3 = state
+Section1:NewToggle(AF_T_003, AF_TSub_003, function(FM_003)
+    getgenv().Farm3 = FM_003
 
     while wait() do
         if getgenv().Farm3 == true then
@@ -156,8 +156,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_004, AF_TSub_004, function(state)
-    getgenv().Farm4 = state
+Section1:NewToggle(AF_T_004, AF_TSub_004, function(FM_004)
+    getgenv().Farm4 = FM_004
 
     while wait() do
         if getgenv().Farm4 == true then
@@ -177,8 +177,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_005, AF_TSub_005, function(state)
-    getgenv().Farm5 = state
+Section1:NewToggle(AF_T_005, AF_TSub_005, function(FM_005)
+    getgenv().Farm5 = FM_005
 
     while wait() do
         if getgenv().Farm5 == true then
@@ -198,8 +198,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_006, AF_TSub_006, function(state)
-    getgenv().Farm6 = state
+Section1:NewToggle(AF_T_006, AF_TSub_006, function(FM_006)
+    getgenv().Farm6 = FM_006
 
     while wait() do
         if getgenv().Farm6 == true then
@@ -219,8 +219,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_007, AF_TSub_007, function(state)
-    getgenv().Farm7 = state
+Section1:NewToggle(AF_T_007, AF_TSub_007, function(FM_007)
+    getgenv().Farm7 = FM_007
 
     while wait() do
         if getgenv().Farm7 == true then
@@ -240,8 +240,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_008, AF_TSub_008, function(state)
-    getgenv().Farm8 = state
+Section1:NewToggle(AF_T_008, AF_TSub_008, function(FM_008)
+    getgenv().Farm8 = FM_008
 
     while wait() do
         if getgenv().Farm8 == true then
@@ -261,8 +261,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_009, AF_TSub_009, function(state)
-    getgenv().Farm9 = state
+Section1:NewToggle(AF_T_009, AF_TSub_009, function(FM_009)
+    getgenv().Farm9 = FM_009
 
     while wait() do
         if getgenv().Farm9 == true then
@@ -282,8 +282,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_010, AF_TSub_010, function(state)
-    getgenv().Farm10 = state
+Section1:NewToggle(AF_T_010, AF_TSub_010, function(FM_0010)
+    getgenv().Farm10 = FM_0010
 
     while wait() do
         if getgenv().Farm10 == true then
@@ -303,8 +303,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_011, AF_TSub_011, function(state)
-    getgenv().Farm11 = state
+Section1:NewToggle(AF_T_011, AF_TSub_011, function(FM_0011)
+    getgenv().Farm11 = FM_0011
 
     while wait() do
         if getgenv().Farm11 == true then
@@ -324,8 +324,8 @@ end)
 
 
 
-Section1:NewToggle(AF_T_012, AF_TSub_012, function(state)
-    getgenv().Farm12 = state
+Section1:NewToggle(AF_T_012, AF_TSub_012, function(FM_0012)
+    getgenv().Farm12 = FM_0012
 
     while wait() do
         if getgenv().Farm12 == true then
@@ -374,7 +374,7 @@ end)
 
 
 
-local TTTT2 = Window:NewTab("Egg")
+local TTTT2 = Window:NewTab("EGG")
 
 
 
@@ -507,7 +507,7 @@ end)
 
 
 
-local TTTT3 = Window:NewTab("Teleport")
+local TTTT3 = Window:NewTab("TELEPORT")
 
 
 
@@ -821,6 +821,36 @@ Section4:NewToggle("Open GUI : AuraUI", "AuraUI", function(AuraUI_01)
         end
     end
 end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
