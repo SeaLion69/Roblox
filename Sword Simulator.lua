@@ -715,11 +715,7 @@ end)
 local TTTT4 = Window:NewTab("GUI")
 
 
-
-
 local Section4 = TTTT4:NewSection("- GUI MENU -")
-
-
 
 
 
@@ -768,8 +764,8 @@ end)
 
 ---- game:GetService("Players").LocalPlayer.PlayerGui.EnchantUI.Main
 
-Section4:NewToggle("Open GUI : EnchantUI", "EnchantUI", function(Upgrades_01)
-    if Upgrades_01 then
+Section4:NewToggle("Open GUI : EnchantUI", "EnchantUI", function(EnchantUI_01)
+    if EnchantUI_01 then
         for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.EnchantUI:GetDescendants()) do
             if v.Name == "Main" then
                 game.Players.LocalPlayer.PlayerGui.EnchantUI.Main.Visible = true
@@ -789,8 +785,8 @@ end)
 
 ---- game:GetService("Players").LocalPlayer.PlayerGui.OmegaUI.Main
 
-Section4:NewToggle("Open GUI : OmegaUI", "OmegaUI", function(Upgrades_01)
-    if Upgrades_01 then
+Section4:NewToggle("Open GUI : OmegaUI", "OmegaUI", function(OmegaUI_01)
+    if OmegaUI_01 then
         for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.OmegaUI:GetDescendants()) do
             if v.Name == "Main" then
                 game.Players.LocalPlayer.PlayerGui.OmegaUI.Main.Visible = true
@@ -810,8 +806,8 @@ end)
 
 ---- game:GetService("Players").LocalPlayer.PlayerGui.AuraUI
 
-Section4:NewToggle("Open GUI : AuraUI", "AuraUI", function(Upgrades_01)
-    if Upgrades_01 then
+Section4:NewToggle("Open GUI : AuraUI", "AuraUI", function(AuraUI_01)
+    if AuraUI_01 then
         for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.AuraUI:GetDescendants()) do
             if v.Name == "Main" then
                 game.Players.LocalPlayer.PlayerGui.AuraUI.Main.Visible = true
@@ -825,36 +821,6 @@ Section4:NewToggle("Open GUI : AuraUI", "AuraUI", function(Upgrades_01)
         end
     end
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
