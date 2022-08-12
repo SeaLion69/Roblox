@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("DNA HUB (Sword Simulator)", "Midnight")
+local Window = Library.CreateLib("DNA (Sword Simulator)", "Midnight")
 
 
 
@@ -12,6 +12,11 @@ local DNA_w_Aegg = 1
 
 
 local TTTT1 = Window:NewTab("Farm")
+
+
+
+
+
 
 local Section1 = TTTT1:NewSection("- Auto Farm Dungeon -")
 
@@ -699,6 +704,148 @@ Section3:NewButton(TP_T_012, TP_TSub_012, function()
     {CFrame = TP_IL12}):Play()
     end)
 end)
+
+
+
+
+
+
+
+
+local TTTT4 = Window:NewTab("GUI")
+
+
+
+
+local Section4 = TTTT4:NewSection("- GUI MENU -")
+
+
+
+
+
+
+---- game:GetService("Players").LocalPlayer.PlayerGui.EvolveUI.Main
+
+Section4:NewToggle("Open GUI : EvolveUI", "EvolveUI", function(EvolveUI_01)
+    if EvolveUI_01 then
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.EvolveUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.EvolveUI.Main.Visible = true
+            end
+        end
+    else
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.EvolveUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.EvolveUI.Main.Visible = false
+            end
+        end
+    end
+end)
+
+
+
+
+---- game:GetService("Players").LocalPlayer.PlayerGui.Upgrades.Main
+
+Section4:NewToggle("Open GUI : Upgrades", "Upgrades", function(Upgrades_01)
+    if Upgrades_01 then
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Upgrades:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.Upgrades.Main.Visible = true
+            end
+        end
+    else
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Upgrades:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.Upgrades.Main.Visible = false
+            end
+        end
+    end
+end)
+
+
+
+
+---- game:GetService("Players").LocalPlayer.PlayerGui.EnchantUI.Main
+
+Section4:NewToggle("Open GUI : EnchantUI", "EnchantUI", function(Upgrades_01)
+    if Upgrades_01 then
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.EnchantUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.EnchantUI.Main.Visible = true
+            end
+        end
+    else
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.EnchantUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.EnchantUI.Main.Visible = false
+            end
+        end
+    end
+end)
+
+
+
+
+---- game:GetService("Players").LocalPlayer.PlayerGui.OmegaUI.Main
+
+Section4:NewToggle("Open GUI : OmegaUI", "OmegaUI", function(Upgrades_01)
+    if Upgrades_01 then
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.OmegaUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.OmegaUI.Main.Visible = true
+            end
+        end
+    else
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.OmegaUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.OmegaUI.Main.Visible = false
+            end
+        end
+    end
+end)
+
+
+
+
+---- game:GetService("Players").LocalPlayer.PlayerGui.AuraUI
+
+Section4:NewToggle("Open GUI : AuraUI", "AuraUI", function(Upgrades_01)
+    if Upgrades_01 then
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.AuraUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.AuraUI.Main.Visible = true
+            end
+        end
+    else
+        for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.AuraUI:GetDescendants()) do
+            if v.Name == "Main" then
+                game.Players.LocalPlayer.PlayerGui.AuraUI.Main.Visible = false
+            end
+        end
+    end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
