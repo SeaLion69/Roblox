@@ -197,7 +197,9 @@ end)
 
 
 
-
+Section0:NewKeybind("Hide UI", "Hide UI", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
 
 
 
